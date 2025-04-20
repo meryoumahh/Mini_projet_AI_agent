@@ -24,13 +24,18 @@ llm = ChatGroq(
 async def read_root():
     return {"Hello": "World"}
 
-def load_system_prompt (prompt: str):
-    with open("systemprompt.txt", "r", encoding="utf-8") as file:
-        content = file.read()
-        print(content)
+def load_system_prompt (prompt: str, prompt_file:str, data_file:str):
+
+    with open(data_file, "r", encoding="utf-8") as df:
+        room_data = df.read()
+
+    with open(prompt_file, "r", encoding="utf-8") as file:
+        prompt_brut = file.read()
+        filled_prompt = prompt_brut.format(availability_data=room_data.strip())
+        print(filled_prompt)
     # Assuming the `messages` format is correct for `llm.invoke`
     messages = [
-        ("system", content),
+        ("system", filled_prompt),
         ("human", prompt),
     ]
 
@@ -47,7 +52,11 @@ async def check_room_availability(room_number: int, bloc_id: str, session: str):
     prompt = f"Check availability for Room {room_number} in Bloc {bloc_id} for Session {session}"
 
     # Call the system prompt function to get the AI's response
-    response = load_system_prompt(prompt)
+    response = load_system_prompt(
+        prompt=prompt,
+        prompt_file="promptcreation/systemprompt.txt",
+        data_file="promptcreation/data.txt"
+        )
     return {
     "message": f"For Room {room_number} in Bloc {bloc_id} for Session {session}",
     "response": response

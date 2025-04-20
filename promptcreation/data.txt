@@ -1,0 +1,7 @@
+Room 1 in Bloc I: Available during S1 S2 S3
+Room 2 in Bloc K: Available during S4 S5 S6
+Room 3 in Bloc G: Available during S2 S3 S4
+Room 4 in Bloc J: Available during S1 S7
+Room 5 in Bloc M: Available during S3 S4
+Room 6 in Bloc L: Available during S2 S6 S7
+Room 7 in Bloc H: Available during S1 S2
