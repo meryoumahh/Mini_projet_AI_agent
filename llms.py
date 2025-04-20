@@ -12,7 +12,7 @@ if "GROQ_API_KEY" not in os.environ:
 
 from langchain_groq import ChatGroq
 llm = ChatGroq(
-    model="llama-3.1-70b-versatile",
+    model="compound-beta",
     temperature=0,
     max_tokens=None,
     timeout=None,
@@ -41,11 +41,20 @@ def load_system_prompt (prompt: str):
     print(ai_msg.content)
     return (ai_msg.content)
 
+@app.get("/items/{room_number}/{bloc_id}/{session}")
+async def check_room_availability(room_number: int, bloc_id: str, session: str):
+    # Construct the prompt using the parameters
+    prompt = f"Check availability for Room {room_number} in Bloc {bloc_id} for Session {session}"
 
-@app.get("/items/{item_id}")
-async def read_item(item_id: str):
-    response = load_system_prompt(item_id)
+    # Call the system prompt function to get the AI's response
+    response = load_system_prompt(prompt)
+    return {
+    "message": f"For Room {room_number} in Bloc {bloc_id} for Session {session}",
+    "response": response
+}
+
+ 
     
     
-    # Assuming ai_msg.content returns the AI response as text
-    return {"item_id": item_id, "response": response}
+    
+ 
