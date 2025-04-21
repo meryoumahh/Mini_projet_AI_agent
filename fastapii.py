@@ -14,9 +14,8 @@ def read_root():
 
 @app.get("/domain/{preference}")
 def read_item(preference:str):
-    # Call the check_room_availability function with the parameters
+    
     response = check_pfe_availability(preference)
     
-    # Return the response, including room number, bloc ID, and session
     return {"for the subject": preference, "response": response}
 

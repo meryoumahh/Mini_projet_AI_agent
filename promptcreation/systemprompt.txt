@@ -5,7 +5,7 @@ Here is the list of student reports:
 
 You will receive a request like:
 "Find reports matching the topic X"
-where X can be any topic such as security, web development, SQL, AI, and so on.
+where X can be any topic such as security, web, web development, SQL, AI, and so on.
 
 Instructions:
 For each subject you receive, return the IDs of the top 3 reports that match the subject based on their key topics.
