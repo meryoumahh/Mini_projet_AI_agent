@@ -1,7 +1,6 @@
-Room 1 in Bloc I: Available during S1 S2 S3
-Room 2 in Bloc K: Available during S4 S5 S6
-Room 3 in Bloc G: Available during S2 S3 S4
-Room 4 in Bloc J: Available during S1 S7
-Room 5 in Bloc M: Available during S3 S4
-Room 6 in Bloc L: Available during S2 S6 S7
-Room 7 in Bloc H: Available during S1 S2
+
+1. Student Name: Lina B., Report Title: "AI for Healthcare", Presentation Date: 2025-06-10, Key Topics: AI, healthcare, deep learning
+2. Student Name: Yassine M., Report Title: "Web App Security Testing", Presentation Date: 2025-06-12, Key Topics: security, penetration testing, web development
+3. Student Name: Karim L., Report Title: "E-commerce Website with Django", Presentation Date: 2025-06-14, Key Topics: web development, e-commerce, Django
+4. Student Name: Amira S., Report Title: "Blockchain in Voting Systems", Presentation Date: 2025-06-13, Key Topics: blockchain, cryptography, security
+5. Student Name: Salim R., Report Title: "Mobile Game with Unity", Presentation Date: 2025-06-15, Key Topics: mobile development, Unity, game design

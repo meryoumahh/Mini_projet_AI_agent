@@ -31,7 +31,7 @@ def load_system_prompt (prompt: str, prompt_file:str, data_file:str):
 
     with open(prompt_file, "r", encoding="utf-8") as file:
         prompt_brut = file.read()
-        filled_prompt = prompt_brut.format(availability_data=room_data.strip())
+        filled_prompt = prompt_brut.format(available_rapports=room_data.strip())
         print(filled_prompt)
     # Assuming the `messages` format is correct for `llm.invoke`
     messages = [
@@ -46,10 +46,10 @@ def load_system_prompt (prompt: str, prompt_file:str, data_file:str):
     print(ai_msg.content)
     return (ai_msg.content)
 
-@app.get("/items/{room_number}/{bloc_id}/{session}")
-async def check_room_availability(room_number: int, bloc_id: str, session: str):
+@app.get("/items/{preference}")
+async def check_pfe_availability(preference: str):
     # Construct the prompt using the parameters
-    prompt = f"Check availability for Room {room_number} in Bloc {bloc_id} for Session {session}"
+    prompt = f'Find reports matching the topic "{preference}'
 
     # Call the system prompt function to get the AI's response
     response = load_system_prompt(
@@ -58,7 +58,7 @@ async def check_room_availability(room_number: int, bloc_id: str, session: str):
         data_file="promptcreation/data.txt"
         )
     return {
-    "message": f"For Room {room_number} in Bloc {bloc_id} for Session {session}",
+    "message": f"For subject {preference}",
     "response": response
 }
 

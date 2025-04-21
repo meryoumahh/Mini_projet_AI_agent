@@ -12,11 +12,11 @@ def read_root():
     return {"Hello": "World"}
 
 
-@app.get("/items/{room_number}/{bloc_id}/{session}")
-def read_item(room_number: int, bloc_id: str, session: str):
+@app.get("/items/{preference}")
+def read_item(preference:str):
     # Call the check_room_availability function with the parameters
-    response = check_room_availability(room_number, bloc_id, session)
+    response = check_room_availability(preference)
     
     # Return the response, including room number, bloc ID, and session
-    return {"room_number": room_number, "bloc_id": bloc_id, "session": session, "response": response}
+    return {"subject": preference, "response": response}
 
