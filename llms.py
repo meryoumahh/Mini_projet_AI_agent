@@ -31,7 +31,7 @@ def load_system_prompt (prompt: str, prompt_file:str, data_file:str):
 
     with open(prompt_file, "r", encoding="utf-8") as file:
         prompt_brut = file.read()
-        filled_prompt = prompt_brut.format(available_rapports=room_data.strip())
+        filled_prompt = prompt_brut.format(available_reports=room_data.strip())
         print(filled_prompt)
     # Assuming the `messages` format is correct for `llm.invoke`
     messages = [
@@ -46,7 +46,7 @@ def load_system_prompt (prompt: str, prompt_file:str, data_file:str):
     print(ai_msg.content)
     return (ai_msg.content)
 
-@app.get("/items/{preference}")
+@app.get("/domain/{preference}")
 async def check_pfe_availability(preference: str):
     # Construct the prompt using the parameters
     prompt = f'Find reports matching the topic "{preference}'

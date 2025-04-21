@@ -1,6 +1,13 @@
 
-1. Student Name: Lina B., Report Title: "AI for Healthcare", Presentation Date: 2025-06-10, Key Topics: AI, healthcare, deep learning
-2. Student Name: Yassine M., Report Title: "Web App Security Testing", Presentation Date: 2025-06-12, Key Topics: security, penetration testing, web development
-3. Student Name: Karim L., Report Title: "E-commerce Website with Django", Presentation Date: 2025-06-14, Key Topics: web development, e-commerce, Django
-4. Student Name: Amira S., Report Title: "Blockchain in Voting Systems", Presentation Date: 2025-06-13, Key Topics: blockchain, cryptography, security
-5. Student Name: Salim R., Report Title: "Mobile Game with Unity", Presentation Date: 2025-06-15, Key Topics: mobile development, Unity, game design
+Id : 1, Student Name: Lina B., Report Title: "AI for Healthcare", Presentation Date: 2025-06-10, Key Topics: AI, healthcare, deep learning
+Id : 2, Student Name: Yassine M., Report Title: "Web App Security Testing", Presentation Date: 2025-06-12, Key Topics: security, penetration testing, web development
+Id : 3, Student Name: Karim L., Report Title: "E-commerce Website with Django", Presentation Date: 2025-06-14, Key Topics: web development, e-commerce, Django
+Id : 4, Student Name: Amira S., Report Title: "Blockchain in Voting Systems", Presentation Date: 2025-06-13, Key Topics: blockchain, cryptography, security
+Id : 5, Student Name: Salim R., Report Title: "Mobile Game with Unity", Presentation Date: 2025-06-15, Key Topics: mobile development, Unity, game design
+Id : 6, Student Name: Nora H., Report Title: "Data Privacy in Social Media", Presentation Date: 2025-06-16, Key Topics: data privacy, social media, encryption
+Id : 7, Student Name: Omar T., Report Title: "Cloud Computing and Its Applications", Presentation Date: 2025-06-18, Key Topics: cloud computing, applications, infrastructure
+Id : 8, Student Name: Amina K., Report Title: "IoT for Smart Cities", Presentation Date: 2025-06-20, Key Topics: IoT, smart cities, sensors
+Id : 9, Student Name: Rami P., Report Title: "AI in Financial Markets", Presentation Date: 2025-06-22, Key Topics: AI, financial markets, machine learning
+Id : 10, Student Name: Layla J., Report Title: "Augmented Reality in Education", Presentation Date: 2025-06-24, Key Topics: AR, education, interactive learning
+Id : 11, Student Name: Amira S., Report Title: "Blockchain in Voting Systems", Presentation Date: 2025-06-13, Key Topics: blockchain, cryptography, security
+Id : 12, Student Name: Salim R., Report Title: "Mobile Game with Unity", Presentation Date: 2025-06-15, Key Topics: mobile development, Unity, game design
