@@ -33,7 +33,7 @@ def load_system_prompt (prompt: str, prompt_file:str, data_file:str):
         prompt_brut = file.read()
         filled_prompt = prompt_brut.format(availability_data=room_data.strip())
         print(filled_prompt)
-    # Assuming the `messages` format is correct for `llm.invoke`
+    
     messages = [
         ("system", filled_prompt),
         ("human", prompt),
@@ -48,10 +48,9 @@ def load_system_prompt (prompt: str, prompt_file:str, data_file:str):
 
 @app.get("/items/{room_number}/{bloc_id}/{session}")
 async def check_room_availability(room_number: int, bloc_id: str, session: str):
-    # Construct the prompt using the parameters
+    
     prompt = f"Check availability for Room {room_number} in Bloc {bloc_id} for Session {session}"
 
-    # Call the system prompt function to get the AI's response
     response = load_system_prompt(
         prompt=prompt,
         prompt_file="promptcreation/systemprompt.txt",
